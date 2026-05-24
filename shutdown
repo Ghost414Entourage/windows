@@ -1,0 +1,10 @@
+ShutDown /S and press Enter. The system will perform an orderly shutdown after 30 seconds.
+
+ShutDown /S /M \\RemoteComputer  If you want to shut down a remote system.
+
+ShutDown /S /T:0   The /T the shutdown—a value of 0 means that the shutdown is immediate.
+
+ShutDown /R  shutdown and restart
+
+ShutDown /G  restore the Windows applications that were open at the time of the shutdown.
+
