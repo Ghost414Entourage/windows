@@ -4,3 +4,5 @@ Import-Module PSWindowsUpdate
 
 Get-WindowsUpdate -Install -AcceptAll -AutoReboot
 
+
+winget upgrade --all
