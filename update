@@ -6,3 +6,5 @@ Get-WindowsUpdate -Install -AcceptAll -AutoReboot
 
 
 winget upgrade --all
+
+sfc /scannow
