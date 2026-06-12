@@ -4,6 +4,7 @@ Import-Module PSWindowsUpdate
 
 Get-WindowsUpdate -Install -AcceptAll -AutoReboot
 
+usoclient StartScan
 
 winget upgrade --all
 
