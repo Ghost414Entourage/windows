@@ -1,4 +1,0 @@
-cd "C:\Program Files\Dell\CommandUpdate"
-
-dcu-cli.exe /applyUpdates
-
