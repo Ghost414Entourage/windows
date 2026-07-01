@@ -1,4 +1,5 @@
 https://learn.microsoft.com/en-us/defender-endpoint/mac-install-manually
 
+mdatp threat policy set --type potentially_unwanted_application --action block
 
 mdatp threat policy list
