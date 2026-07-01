@@ -1,0 +1,15 @@
+Open Windows Security
+
+Go to Device security
+
+Under Core isolation, click Core isolation details
+
+Toggle Memory integrity to On
+
+Restart the system when prompted
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Press Win + R → type msinfo32 → press Enter
+
