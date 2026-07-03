@@ -1,5 +1,9 @@
 https://learn.microsoft.com/en-us/defender-endpoint/mac-install-manually
 
+https://learn.microsoft.com/en-us/defender-endpoint/mac-preferences
+
+https://learn.microsoft.com/en-us/defender-endpoint/mac-install-with-intune
+
 mdatp threat policy set --type potentially_unwanted_application --action block
 
 mdatp threat policy list
