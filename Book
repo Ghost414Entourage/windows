@@ -18,4 +18,8 @@ Install-Module -Name PSWindowsUpdate -Force
 
 
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Get-ComputerInfo | Select-Object WindowsProductName, OsVersion, CsProcessors
+
 
