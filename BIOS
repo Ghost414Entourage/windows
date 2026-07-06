@@ -1,2 +1,5 @@
+https://www.dell.com/support/kbdoc/en-us/000204669/how-to-automatically-restart-windows-into-bios-setup
+
+
 shutdown /r /fw /t 0
 shutdown /r /t 0
