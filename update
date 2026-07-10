@@ -11,3 +11,12 @@ winget upgrade --all
 sfc /scannow
 
 Dism /Online /Cleanup-Image /ScanHealth
+
+Get-WindowsUpdate
+
+Install-WindowsUpdate -AcceptAll
+
+Get-WUHistory
+
+Install-WindowsUpdate -KBArticleID 
+
