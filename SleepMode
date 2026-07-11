@@ -3,5 +3,6 @@ https://www.hp.com/us-en/shop/tech-takes/how-to-stop-laptop-from-sleeping-window
 
 powercfg /query
 
+powercfg /a
 
 
