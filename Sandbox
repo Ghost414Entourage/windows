@@ -1,3 +1,28 @@
 https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-install
 
 https://www.linkedin.com/pulse/windows-sandbox-secure-disposable-environment-your-pc-tariq-khalid-qvlae
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Enable the feature: 
+
+​1. ​ Settings → Apps → Optional features → More Windows features 
+
+​2. ​ Check Windows Sandbox → OK → Restart
+
+
+
+Launch Sandbox: ​
+
+● ​ Search for “Windows Sandbox” in Start menu 
+
+​● ​ Or run: windowsdefender://sandbox
+
+
+
+
+Sandbox supports configuration files (.wsb) that allow fine-grained control over each session. Create an XML file with .wsb extension and double-click to launch customized Sandbox.
+
