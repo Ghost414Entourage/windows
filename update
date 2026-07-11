@@ -12,6 +12,8 @@ sfc /scannow
 
 Dism /Online /Cleanup-Image /ScanHealth
 
+Install-Module -Name PSWindowsUpdate -Force
+
 Get-WindowsUpdate
 
 Install-WindowsUpdate -AcceptAll
