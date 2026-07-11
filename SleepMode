@@ -1,10 +1,7 @@
-Open Settings.
+https://www.hp.com/us-en/shop/tech-takes/how-to-stop-laptop-from-sleeping-windows-11
 
-Click on System.
 
-Click the Power & battery tab.
+powercfg /query
 
-Under the “Power” section, click the “Screen and sleep” setting.
 
-Choose the Never option to prevent the screen from turning off.
 
