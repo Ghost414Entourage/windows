@@ -6,11 +6,5 @@ https://www.dell.com/support/manuals/en-us/command-update/dcu_ug/dell-command-|-
 dell supportassist
 
 
-cd "%ProgramFiles%\Dell\CommandUpdate"
-dcu-cli.exe /scan
-
-
-cd "%ProgramFiles(x86)%\Dell\CommandUpdate"
-dcu-cli.exe /scan
 
 
