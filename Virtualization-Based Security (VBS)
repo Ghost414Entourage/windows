@@ -1,0 +1,6 @@
+To open the GPMC, select Start, enter Group Policy Management in the search box, and then select Group Policy Management.
+
+Use Group Policy or Intune to enforce: Computer Configuration → Administrative Templates → System → Device Guard 
+​● ​ Turn On Virtualization Based Security = Enabled 
+​● ​ Select Platform Security Level = Secure Boot and DMA Protection
+● ​ Credential Guard Configuration = Enabled with UEFI lock
