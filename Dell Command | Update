@@ -1,3 +1,16 @@
 https://www.dell.com/support/home/en-us?app=drivers
+https://www.dell.com/support/manuals/en-us/command-update/dcu_ug/dell-command-|-update-command-line-interface?guid=guid-c8d5aee8-5523-4d55-a421-1781d3da6f08&lang=en-us
+
+
 
 dell supportassist
+
+
+cd "%ProgramFiles%\Dell\CommandUpdate"
+dcu-cli.exe /scan
+
+
+cd "%ProgramFiles(x86)%\Dell\CommandUpdate"
+dcu-cli.exe /scan
+
+
