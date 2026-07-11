@@ -1,0 +1,21 @@
+To enable it manually: ​
+1. ​ Open Windows Security ​
+
+2. ​ Go to Device security ​
+
+3. ​ Under Core isolation, click Core isolation details ​
+
+4. ​ Toggle Memory integrity to On ​
+
+5. ​ Restart the system when prompted If the toggle is grayed out, one or more of the following conditions exists: 
+​● ​ The processor does not support required virtualization features 
+​● ​ Virtualization is disabled in firmware (UEFI/BIOS) 
+​● ​ Secure Boot is disabled
+● ​ An incompatible driver is preventing activation Checking Compatibility and Status The most reliable way to determine whether Memory Integrity is active and what is blocking it: Press Win + R → type msinfo32 → press Enter Look for these lines near the bottom: ​
+● ​ Virtualization-based security = Running 
+​● ​ Virtualization-based security Status = Running ​
+● ​ Credential Guard = Running (if also enabled) ​
+● ​ Memory integrity = On If it says “Not enabled” or “Supported, but disabled,” scroll up to “Device security” section for the reason (usually an incompatible driver).
+
+
+
