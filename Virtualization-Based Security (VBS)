@@ -4,3 +4,14 @@ Use Group Policy or Intune to enforce: Computer Configuration → Administrative
 ​● ​ Turn On Virtualization Based Security = Enabled 
 ​● ​ Select Platform Security Level = Secure Boot and DMA Protection
 ● ​ Credential Guard Configuration = Enabled with UEFI lock
+
+
+Activating and Verifying HVCI To enable Memory Integrity (which activates HVCI): 
+​
+1. ​ Open Settings → Privacy & security → Windows Security → Device security 
+
+​2. ​ Under Core isolation, click Core isolation details 
+
+3. ​ Toggle Memory integrity to On ​
+
+4. ​ Restart when prompted
