@@ -22,9 +22,9 @@ dcu-cli.exe /scan
 .\dcu-cli.exe /scan
 
 
-dcu-cli.exe /applyUpdates /reboot
+dcu-cli.exe /applyUpdates -reboot=enable
 
-.\dcu-cli.exe /applyUpdates /reboot
+.\dcu-cli.exe /applyUpdates -reboot=enable
 
 
 
