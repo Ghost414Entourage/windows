@@ -8,6 +8,9 @@ https://www.dell.com/support/product-details/en-us/product/optiplex-5070-micro/d
 
 winget show Dell.CommandUpdate.Universal
 
+winget install -e --id Dell.CommandUpdate.Universal
+
+
 
 
 
