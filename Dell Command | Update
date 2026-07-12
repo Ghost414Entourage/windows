@@ -10,12 +10,21 @@ winget show Dell.CommandUpdate.Universal
 
 winget show Dell.CommandUpdate.Universal --versions
 
+
 winget install -e --id Dell.CommandUpdate.Universal
+
 
 cd "C:\Program Files\Dell\CommandUpdate"
 
+
 dcu-cli.exe /scan
 
+.\dcu-cli.exe /scan
+
+
+dcu-cli.exe /applyUpdates /reboot
+
+.\dcu-cli.exe /applyUpdates /reboot
 
 
 
