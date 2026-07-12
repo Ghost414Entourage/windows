@@ -30,6 +30,16 @@ shutdown /r /t 0 /f
 
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+winget search supportassist
+
+winget search supportassist --source msstore
+
+winget install --id XPDCCXDN26VNBT --source msstore
+
+
 
 
 
