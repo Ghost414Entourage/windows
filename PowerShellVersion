@@ -1,1 +1,6 @@
 if ($PSVersionTable.PSVersion.Major -ge 7) { Write-Host "You have PowerShell $($PSVersionTable.PSVersion)!" -ForegroundColor Green } else { Write-Host "You have Windows PowerShell 5.1 -- consider installing PS7" -ForegroundColor Yellow }
+
+
+winget install --id Microsoft.PowerShell --source winget --silent
+
+iex '& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI'
