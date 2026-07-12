@@ -6,3 +6,8 @@ winget install --id Microsoft.PowerShell --source winget --silent
 iex '& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI'
 
 choco install powershell-core -y
+
+
+pwsh --version
+
+
