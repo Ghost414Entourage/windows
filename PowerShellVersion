@@ -12,3 +12,5 @@ pwsh --version
 
 
 winget install --id Microsoft.WindowsTerminal --source winget
+
+pwsh
