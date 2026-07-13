@@ -1,0 +1,75 @@
+(Shows the current status of Microsoft Defender)
+
+Get-MpComputerStatus
+
+
+(Enables real-time protection - Realtime Protection)
+
+Set-MpPreference -DisableRealtimeMonitoring $false
+
+
+(Enables behavior monitoring of programs (Behavior Monitoring), i.e., detection of suspicious application activity)
+
+Set-MpPreference -DisableBehaviorMonitoring $false
+
+
+(Enables scanning of downloaded files and attachments - IOAV Protection)
+
+Set-MpPreference -DisableIOAVProtection $false
+
+
+(Enables script scanning)
+
+Set-MpPreference -DisableScriptScanning $false
+
+
+(Enables extended reporting to Microsoft MAPS (Microsoft Active Protection Service), i.e., sending more threat data to Microsoft)
+
+Set-MpPreference -MAPSReporting Advanced
+
+
+(Allows automatically sending safe samples of suspicious files to Microsoft for analysis)
+
+Set-MpPreference -SubmitSamplesConsent SendSafeSamples
+
+
+(Enables protection against: potentially unwanted applications) 
+
+Set-MpPreference -PUAProtection Enabled
+
+
+(Downloads the latest virus definitions for Defender)
+
+Update-MpSignature
+
+
+(Shows the current configuration of Defender and all its settings)
+
+Get-MpPreference
+
+
+(Enables Controlled Folder Access in audit mode.
+
+Set-MpPreference -EnableControlledFolderAccess AuditMode
+
+
+(Enables controlled folder access normally. Protects important folders, such as Documents, Desktop, and Pictures, from unauthorized changes, e.g., by ransomware.)
+
+Set-MpPreference -EnableControlledFolderAccess Enabled
+
+
+(Enables Defender's network protection. Helps block connections to suspicious or malicious addresses)
+
+Set-MpPreference -EnableNetworkProtection Enabled
+
+
+(Adds the specified application to Controlled Folder Access exceptions. That is, this application will be allowed to write to protected folders)
+
+Add-MpPreference -ControlledFolderAccessAllowedApplications "C:\Program Files\yourapp\app.exe"
+
+
+(Shows current Microsoft Defender settings, to verify that changes were saved)
+
+Get-MpPreference
+
+
