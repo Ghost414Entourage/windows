@@ -1,0 +1,25 @@
+(Opens Windows sign-in options settings)
+
+Start ms-settings:signinoptions
+
+
+(Lists local users on the computer)
+
+net user
+
+
+(Shows who belongs to the local administrators group, i.e., who has administrator privileges)
+
+net localgroup administrators
+
+
+(Shows groups and permissions of the currently logged-in user)
+
+whoami /groups
+
+
+(Opens the Windows Local Security Policy)
+
+secpol.msc
+
+
