@@ -1,3 +1,11 @@
+https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/configure-with-command-line?tabs=powershell
+
+
+-----------------------------------------------------------------------------------------------------
+
+
+
+
 (Shows the firewall profile settings)
 
 Get-NetFirewallProfile
@@ -26,4 +34,20 @@ Set-NetFirewallProfile -Profile Domain -DefaultInboundAction Block -DefaultOutbo
 (Exports the current firewall settings after the changes to a backup file)
 
 netsh advfirewall export "C:\backup\firewall_after.wfw"
+
+
+(Which profile is in use)
+
+Get-NetConnectionProfile
+
+
+(Change profile)
+
+Set-NetConnectionProfile -Name "YourNetworkName" -NetworkCategory Private
+
+Set-NetConnectionProfile -Name "PetShadow" -NetworkCategory Private
+
+
+
+
 
