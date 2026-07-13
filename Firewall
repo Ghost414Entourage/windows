@@ -1,0 +1,29 @@
+(Shows the firewall profile settings)
+
+Get-NetFirewallProfile
+
+
+(Enables the firewall for all profiles)
+
+Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True
+
+
+(For the Public profile: blocks inbound traffic by default, allows outbound traffic by default)
+
+Set-NetFirewallProfile -Profile Public -DefaultInboundAction Block -DefaultOutboundAction Allow
+
+
+(Same for the Private profile)
+
+Set-NetFirewallProfile -Profile Private -DefaultInboundAction Block -DefaultOutboundAction Allow
+
+
+(Same for the Domain profile)
+
+Set-NetFirewallProfile -Profile Domain -DefaultInboundAction Block -DefaultOutboundAction Allow
+
+
+(Exports the current firewall settings after the changes to a backup file)
+
+netsh advfirewall export "C:\backup\firewall_after.wfw"
+
