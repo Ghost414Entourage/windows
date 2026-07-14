@@ -1,0 +1,18 @@
+Shows the BitLocker status for disks
+
+manage-bde -status
+
+
+Shows the BitLocker protectors/protection keys for drive C
+
+manage-bde -protectors -get C
+
+
+PowerShell version for checking BitLocker
+
+Get-BitLockerVolume
+
+
+Suspending BitLocker before firmware/BIOS changes
+
+Suspend-BitLocker -MountPoint "C:" -RebootCount 1 Resume-BitLocker -MountPoint "C:"
