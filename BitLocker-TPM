@@ -16,3 +16,41 @@ Get-BitLockerVolume
 Suspending BitLocker before firmware/BIOS changes
 
 Suspend-BitLocker -MountPoint "C:" -RebootCount 1 Resume-BitLocker -MountPoint "C:"
+
+
+Add the TPM Key Protector
+
+Add-BitLockerKeyProtector -MountPoint "C:" -TpmProtector
+
+
+Back up a Recovery Key
+
+Add-BitLockerKeyProtector -MountPoint "C:" -RecoveryPasswordProtector
+
+
+Turn Protection On
+
+Resume-BitLocker -MountPoint "C:"
+
+
+Verify the Fix
+
+Get-BitLockerVolume -MountPoint C:
+
+
+Undo "Turn Protection On
+
+Suspend-BitLocker -MountPoint "C:" -RebootCount 0
+
+
+Undo the Key Protectors
+
+Get-BitLockerVolume -MountPoint "C:" | Select-Object -ExpandProperty KeyProtector
+
+
+
+
+
+
+
+
