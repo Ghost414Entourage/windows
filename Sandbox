@@ -24,5 +24,7 @@ Launch Sandbox: ​
 
 
 
+
+
 Sandbox supports configuration files (.wsb) that allow fine-grained control over each session. Create an XML file with .wsb extension and double-click to launch customized Sandbox.
 
