@@ -48,6 +48,18 @@ Undo the Key Protectors
 Get-BitLockerVolume -MountPoint "C:" | Select-Object -ExpandProperty KeyProtector
 
 
+To delete all key protectors associated with the drive at once
+
+
+$Volume = Get-BitLockerVolume -MountPoint "C:"
+foreach ($Protector in $Volume.KeyProtector) {
+    Remove-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId $Protector.KeyProtectorId
+}
+
+
+
+
+
 
 
 
