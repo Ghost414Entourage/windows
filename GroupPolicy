@@ -6,3 +6,19 @@ gpedit.msc
 Opens Local Security Policy
 
 secpol.msc
+
+
+Generates an HTML report of the currently applied Group Policy settings
+
+gpresult /h C:\gpresult.html
+
+
+Opens Resultant Set of Policy
+
+rsop.msc
+
+
+
+
+
+
