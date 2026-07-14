@@ -1,0 +1,8 @@
+Opens the Local Group Policy Editor
+
+gpedit.msc
+
+
+Opens Local Security Policy
+
+secpol.msc
