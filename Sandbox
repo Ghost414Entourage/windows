@@ -19,7 +19,7 @@ Launch Sandbox: ​
 
 ● ​ Search for “Windows Sandbox” in Start menu 
 
-​● ​ Or run: windowsdefender://sandbox
+​● ​ Or run: Start-Process "WindowsSandbox.exe"
 
 
 
