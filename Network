@@ -1,0 +1,166 @@
+Shows network connection profiles
+
+Get-NetConnectionProfile
+
+
+Shows network adapters
+
+Get-NetAdapter
+
+
+Shows IP configuration
+
+Get-NetIPConfiguration
+
+
+Shows which protocols/services are bound to network adapters
+
+Get-NetAdapterBinding
+
+
+Classic command showing full network configuration
+
+ipconfig /all
+
+
+(Disables NetBIOS over TCP)
+
+wmic nicconfig where TcpipNetbiosOptions=0 call SetTcpipNetbios 2
+
+
+If you want to disable any protocol on the network – here is an example template:
+
+Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_implant
+
+
+When you want to re-enable it:
+
+Enable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_implant
+
+
+Disable "File and Printer Sharing for Microsoft Networks"
+
+Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_server
+
+
+
+
+netsh int ipv4 show global
+
+
+netsh int ipv6 show global
+
+
+netsh interface ipv4 show interface "Ethernet"
+
+
+netsh interface ipv6 show interface "Ethernet"
+
+
+Command to disable ICMP Redirects in IPv4:
+
+netsh interface ipv4 set global icmpredirects=disabled
+
+
+Command to enable ICMP Redirects in IPv4:
+
+netsh interface ipv4 set global icmpredirects=enabled
+
+
+LIST OF COMMANDS FOR IPv4:
+
+[[advertise=]enabled|disabled] [[mtu=]<integer>]
+
+[[siteprefixlength=]<integer>]
+
+[[nud=]enabled|disabled]
+
+[[basereachabletime=]<integer>]
+
+[[retransmittime=]<integer>]
+
+[[dadtransmits=]<integer>]
+
+[[routerdiscovery=]enabled|disabled|dhcp]
+
+[[managedaddress=]enabled|disabled]
+
+[[otherstateful=]enabled|disabled]
+
+[[weakhostsend=]enabled|disabled]
+
+[[weakhostreceive=]enabled|disabled]
+
+[[ignoredefaultroutes=]enabled|disabled]
+
+[[advertisedrouterlifetime=]<0-65535>]
+
+[[advertisedefaultroute=]enabled|disabled]
+
+[[currenthoplimit=]<0-255>] [[store=]active|persistent]
+
+[[forcearpndwolpattern=]enabled|disabled]
+
+[[enabledirectedmacwolpattern=]enabled|disabled]
+
+[[ecncapability=]ecndisabled|ect1|ect0|application]
+
+[[rabaseddnsconfig=]enabled|disabled]
+
+[[dhcpstaticipcoexistence=]enabled|disabled]
+
+
+LIST OF COMMANDS FOR IPv6
+
+[[defaultcurhoplimit=]<integer>] 
+
+[[neighborcachelimit=]<integer>]
+
+[[routecachelimit=]<integer>] 
+
+[[reassemblylimit=]<integer>] 
+
+[[icmpredirects=]enabled|disabled]
+
+[[sourceroutingbehavior=]drop|forward|dontforward]
+
+[[taskoffload=]enabled|disabled] 
+
+[[dhcpmediasense=]enabled|disabled] 
+
+[[mediasenseeventlog=]enabled|disabled] 
+
+[[mldlevel=]none|sendonly|all]
+
+[[mldversion=]version1|version2|version3]
+
+[[multicastforwarding=]enabled|disabled] 
+
+[[groupforwardedfragments=]enabled|disabled] 
+
+[[randomizeidentifiers=]enabled|disabled]
+
+[[store=]active|persistent] 
+
+[[addressmaskreply=]enabled|disabled] 
+
+[[minmtu=]<integer>]
+
+[[flowlabel=]enabled|disabled] 
+
+[[loopbacklargemtu=]enabled|disabled] 
+
+[[loopbackworkercount=]enabled|disabled]
+
+[[loopbackexecutionmode=]inline|adaptive] 
+
+[[sourcebasedecmp=]enabled|disabled] 
+
+[[reassemblyoutoforderlimit=]<integer>]
+
+
+
+
+
+
+
