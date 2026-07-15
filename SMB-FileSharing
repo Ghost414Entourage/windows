@@ -1,0 +1,38 @@
+Determine whether the computer needs to share files or printers
+
+
+(Shows the current SMB server configuration)
+
+Get-SmbServerConfiguration
+
+
+(Enables and enforces SMB signing)
+
+Set-SmbServerConfiguration -EnableSecuritySignature $true -RequireSecuritySignature $true -Confirm:$false
+
+
+(Enables encryption of SMB traffic)
+
+Set-SmbServerConfiguration -EncryptData $true -Confirm:$false
+
+
+(Rejects SMB connections without encryption)
+
+Set-SmbServerConfiguration -RejectUnencryptedAccess $true -Confirm:$false
+
+
+(Disables the old SMB1 version)
+
+Set-SmbServerConfiguration -EnableSMB1Protocol $false -Confirm:$false
+
+
+(Lists currently shared SMB folders on the computer)
+
+Get-SmbShare
+
+
+
+
+
+
+
