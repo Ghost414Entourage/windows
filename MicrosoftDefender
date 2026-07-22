@@ -126,8 +126,39 @@ This command ALREADY changes system settings
 
 Globally enables: 
 
-DEP (Data Execution Prevention)  
+- DEP (Data Execution Prevention)  DEP blocks execution of code in data memory
 
-SEHOP (Structured Exception Handler Overwrite Protection)
+- SEHOP (Structured Exception Handler Overwrite Protection) SEHOP makes it harder for exploits to hijack exception handling
+
+- CFG (Control Flow Guard)  That is, additional protection against exploits and malware. CFG makes it harder to jump to malicious code / ROP exploits
+
+Set-ProcessMitigation -System -Enable DEP,SEHOP,CFG
+
+
+
+
+Does not block anything; it only records what would have been blocked if the rule were active
+
+Add-MpPreference -AttackSurfaceReductionRules_Ids <Rule_GUID> -AttackSurfaceReductionRules_Actions AuditMode
+
+
+Blocks behavior considered risky
+
+Add-MpPreference -AttackSurfaceReductionRules_Ids <Rule_GUID> -AttackSurfaceReductionRules_Actions Enabled
+
+
+
+
+
+Shows the current Microsoft Defender settings, including, among others: AttackSurfaceReductionRules_Ids AttackSurfaceReductionRules_Actions
+That is, you can check which ASR rules are added and whether they are in mode: 
+0 = Disabled 
+1 = Enabled 
+2 = AuditMode 
+6 = Warn <Rule_GUID> is the ID of a specific rule, e.g., a rule blocking suspicious script or process launches from Office. 
+The safest approach is to first set rules to AuditMode, check that nothing important would be blocked, and only then change to Enabled.
+
+
+
 
 
