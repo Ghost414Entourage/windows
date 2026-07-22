@@ -1,0 +1,92 @@
+show interfaces
+
+netsh wlan show interfaces
+
+
+
+Clears the DNS
+
+ipconfig /flushdns
+
+
+
+Releases the current DHCP
+
+ipconfig /release
+
+ipconfig /renew
+
+
+ARP table
+
+arp –a or /a
+
+
+Tests network connectivity to a host or IP address
+
+ping <hostname_or_ip>
+
+
+
+Traces the route packets to reach a destination
+
+tracert <hostname_or_ip>
+
+
+Queries DNS servers to resolve domain names or IP addresses
+
+nslookup <hostname>
+
+
+
+Displays active TCP/IP connections, listening ports, and network statistics.
+
+
+netstat [-a] [-n] [-o]
+
+
+
+
+Displays or modifies the IP routing table.
+
+route print
+
+
+Manages network resources such as shared drives, users, and connections.
+
+net use
+
+
+Transfers files between local and remote systems using the FTP protocol.
+
+ftp <server_address>
+
+FTP is not secure  Use SFTP or FTPS when possible
+
+
+
+Configures and manages network settings and profiles
+
+netsh wlan show profiles
+
+netsh is useful for: 
+- Managing Wi-Fi profiles 
+- Configuring network interfaces 
+- Troubleshooting connectivity  
+- Advanced network administration
+
+
+
+Connects to remote systems using the Telnet protocol.
+
+telnet <hostname> <port>
+
+
+
+
+
+
+
+
+
+
