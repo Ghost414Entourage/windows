@@ -73,3 +73,42 @@ Add-MpPreference -ControlledFolderAccessAllowedApplications "C:\Program Files\yo
 Get-MpPreference
 
 
+
+
+
+Enables Controlled Folder Access in audit mode, That is, the system only records what would have been blocked, but does not actually block anything yet)
+
+Set-MpPreference -EnableControlledFolderAccess AuditMode
+
+
+
+Enables controlled folder access normally. Protects important folders, such as Documents, Desktop, and Pictures, from unauthorized changes, e.g., by ransomware.
+
+Set-MpPreference -EnableControlledFolderAccess Enabled
+
+
+
+Enables Defender's network protection. Helps block connections to suspicious or malicious addresses
+
+Set-MpPreference -EnableNetworkProtection Enabled
+
+
+
+Adds the specified application to Controlled Folder Access exceptions. That is, this application will be allowed to write to protected folders
+
+Add-MpPreference -ControlledFolderAccessAllowedApplications "C:\Program Files\yourapp\app.exe"
+
+
+
+Shows current Microsoft Defender settings, to verify that changes were saved
+
+Get-MpPreference
+
+
+
+
+
+
+
+
+
