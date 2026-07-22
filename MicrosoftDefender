@@ -106,9 +106,28 @@ Get-MpPreference
 
 
 
+Opens Windows Defender / Windows Security settings / App & Browser Control → Exploit Protection settings
+
+Start ms-settings:windowsdefender
+
+
+Shows global system protections (mitigations) set for the entire Windows
+
+Get-ProcessMitigation -System
+
+
+Shows what exploit protections are set for a specific process, here for Microsoft Edge
+
+Get-ProcessMitigation -Name msedge.exe
 
 
 
+This command ALREADY changes system settings
 
+Globally enables: 
+
+DEP (Data Execution Prevention)  
+
+SEHOP (Structured Exception Handler Overwrite Protection)
 
 
