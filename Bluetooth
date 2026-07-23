@@ -36,14 +36,7 @@ Get-PnpDevice -Class Bluetooth | Enable-PnpDevice -Confirm:$false
 Get-PnpDevice -Class Bluetooth
 
 
-See only disabled devices:
-
-Get-PnpDevice -Class Bluetooth -Status Error
-
-
-See only active/enabled devices:
-
-Get-PnpDevice -Class Bluetooth -Status OK
+Get-PnpDevice -Class Bluetooth | Format-List FriendlyName,Status,Problem,Present
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
