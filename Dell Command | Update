@@ -44,6 +44,19 @@ Where-Object DisplayName -like "*Dell Command*" |
 Select-Object DisplayName, InstallLocation
 
 
+
+& "C:\Program Files\Dell\CommandUpdate\DellCommandUpdate.exe"
+
+"C:\Program Files\Dell\CommandUpdate\DellCommandUpdate.exe"
+
+& "C:\Program Files\Dell\CommandUpdate\dcu-cli.exe" /scan
+
+& "C:\Program Files\Dell\CommandUpdate\dcu-cli.exe" /applyUpdates
+
+& "C:\Program Files\Dell\CommandUpdate\dcu-cli.exe" /?
+
+& "C:\Program Files\Dell\CommandUpdate\dcu-cli.exe" -help
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
