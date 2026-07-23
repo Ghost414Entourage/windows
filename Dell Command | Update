@@ -31,6 +31,12 @@ dcu-cli.exe /applyUpdates
 shutdown /r /t 0 /f
 
 
+winget list Shows what is installed on your computer
+
+winget show Shows information about a package in the repository
+
+winget list --id Dell.CommandUpdate.Universal
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
