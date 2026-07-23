@@ -23,7 +23,7 @@ Under the General tab, click the Startup type dropdown menu, and choose Disabled
 This stops Bluetooth processes in the background, preventing users from re-enabling it.
 Click Stop, Apply, and then OK
 
-
+devmgmt.msc
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
