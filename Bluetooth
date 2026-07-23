@@ -38,6 +38,10 @@ Get-PnpDevice -Class Bluetooth
 
 Get-PnpDevice -Class Bluetooth | Format-List FriendlyName,Status,Problem,Present
 
+Get-PnpDevice -Class Bluetooth | Format-List *
+
+Get-PnpDevice -Class Bluetooth | Select-Object * | Format-List
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
