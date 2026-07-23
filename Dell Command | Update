@@ -38,6 +38,12 @@ winget show Shows information about a package in the repository
 winget list --id Dell.CommandUpdate.Universal
 
 
+
+Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" |
+Where-Object DisplayName -like "*Dell Command*" |
+Select-Object DisplayName, InstallLocation
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
