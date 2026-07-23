@@ -1,0 +1,53 @@
+https://www.ninjaone.com/blog/how-to-enable-or-disable-bluetooth-windows/
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Configure Bluetooth via the Local Group Policy Editor
+
+Press Win + R to launch Run, type gpedit.msc, and press Ctrl + Shift + Enter.
+
+Go to Computer Configuration > Administrative Templates > Network > Bluetooth.
+
+Inside Bluetooth, double-click Turn off the Bluetooth user experience.
+
+Set the policy to Enabled to hide the Bluetooth UI and prevent its usage. Set the policy to Disabled to reverse the change above.
+
+Optionally, you can go to services.msc to prevent the Bluetooth stack from running.
+Press Win + R to open Run, type services.msc, and then press Enter.
+Find Bluetooth Support Service, right-click, and select Properties.
+Under the General tab, click the Startup type dropdown menu, and choose Disabled.
+This stops Bluetooth processes in the background, preventing users from re-enabling it.
+Click Stop, Apply, and then OK
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Get-PnpDevice -Class Bluetooth | Disable-PnpDevice -Confirm:$false
+
+Get-PnpDevice -Class Bluetooth | Enable-PnpDevice -Confirm:$false
+
+
+Get-PnpDevice -Class Bluetooth
+
+
+See only disabled devices:
+
+Get-PnpDevice -Class Bluetooth -Status Error
+
+
+See only active/enabled devices:
+
+Get-PnpDevice -Class Bluetooth -Status OK
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
