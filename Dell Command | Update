@@ -13,6 +13,8 @@ winget show Dell.CommandUpdate.Universal --versions
 
 winget install -e --id Dell.CommandUpdate.Universal
 
+winget install --id Dell.CommandUpdate.Universal --version <version>
+
 
 cd "C:\Program Files\Dell\CommandUpdate"
 
