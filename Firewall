@@ -49,5 +49,25 @@ Set-NetConnectionProfile -Name "PetShadow" -NetworkCategory Private
 
 
 
+-----------------------------------------------------------------------------------------------------
+
+
+
+
+configuration for basic protection
+​•​         Open Windows Security from the Start Menu to review your protection status. 
+​•​         Ensure Real-time protection is toggled ON. 
+​•​         Run a Quick Scan weekly: Windows Security > Virus & threat protection > Quick scan. 
+​•​         Enable Cloud-delivered protection for the latest threat definitions.
+
+
+Go to Settings > Privacy & Security > Windows Security > Firewall & network protection. 
+​•​         Ensure the firewall is ON for Domain, Private, and Public networks. 
+​•​         Do not turn off the firewall unless directed by a trusted IT professional.
+
+
+
+-----------------------------------------------------------------------------------------------------
+
 
 
