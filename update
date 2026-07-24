@@ -31,6 +31,9 @@ Install-WindowsUpdate
 Uninstall-Module -Name PSWindowsUpdate -AllVersions -Force
 Remove-Module -Name PSWindowsUpdate -Force
 Get-InstalledModule -Name PSWindowsUpdate
+Get-Module -ListAvailable
+Get-Module
+
 
 
 
