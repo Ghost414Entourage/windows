@@ -1,0 +1,27 @@
+Get-Command
+
+Useful for: 
+
+Discovering what PowerShell can do on your system  
+Finding commands when you don’t know the exact name  
+Confirming whether a module or cmdlet is installed  
+
+Detailed Explanation 
+PowerShell does not use traditional “commands” like CMD  
+Instead, it uses cmdlets (verb-noun format)  
+Get-Command shows everything PowerShell recognizes as executable  
+
+Common Parameters 
+-Name → Search for a specific command  
+-Module → View commands from a specific module  
+-CommandType → Filter by cmdlet, function, or alias
+
+
+Get-Command -Name Get-*
+
+Lists all commands starting with “Get”  
+Shows command type and source module
+
+
+
+
