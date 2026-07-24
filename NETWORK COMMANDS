@@ -2,6 +2,15 @@ show interfaces
 
 netsh wlan show interfaces
 
+------------------------------------------
+
+IPCONFIG — Your Network Identity Card
+
+IPCONFIG
+
+IPCONFIG /ALL
+
+
 
 
 Clears the DNS
@@ -16,46 +25,92 @@ ipconfig /release
 
 ipconfig /renew
 
+------------------------------------------------------
+
+ARP shows the mapping between IP addresses and MAC addresses on your local network. Use it to spot duplicate IPs or to find the hardware address of a neighbour:
 
 ARP table
 
 arp –a or /a
 
+ARP -A
+
+
+--------------------------------------------------------------------
 
 Tests network connectivity to a host or IP address
 
 ping <hostname_or_ip>
 
+Add -t to ping continuously until you press Ctrl + C — great for watching a flaky connection over time. PING -t 192.168.1.1
 
+Other useful switches: 
+​•​         -n count — number of echo requests to send. ​
+•​         -l size — buffer size for the request (test for fragmentation issues). 
+​•​         -a — resolve addresses to hostnames. 
+​•​         -4 / -6 — force IPv4 or IPv6.
 
+-------------------------------------------------------------------------------
+TRACERT (trace route) maps every router between your machine and the destination, showing the round-trip time at each hop.
 Traces the route packets to reach a destination
 
 tracert <hostname_or_ip>
 
+TRACERT google.com
+
+PATHPING — TRACERT + Statistics
+PATHPING combines TRACERT and PING into a single report.
+
+PATHPING google.com
+
+
+------------------------------------------------------------------------------------------------
 
 Queries DNS servers to resolve domain names or IP addresses
+NSLOOKUP queries a DNS server for the IP address of a hostname. The first line of the answer tells you which DNS server replied — useful to confirm that your machine is asking the resolver you expect.
 
 nslookup <hostname>
 
 
+---------------------------------------------------------------------------------------------------------------------
 
 Displays active TCP/IP connections, listening ports, and network statistics.
-
+NETSTAT lists active TCP and UDP connections. Run it on its own for a clean list of conversations in progress:
 
 netstat [-a] [-n] [-o]
 
+Combine -A and -N to display all sockets, including listening ones, and skip the hostname lookup (faster, and exposes ports you might want to investigate).
+
+NETSTAT -AN
+
+Other handy switches: 
+​•​         -O — show the owning process ID for each connection. ​
+•​         -B — show the executable name behind each connection (run as admin). ​
+•​         -R — display the routing table. 
+​•​         -S — protocol statistics.
 
 
+
+
+--------------------------------------------------------------------------------------------------------------------------------
 
 Displays or modifies the IP routing table.
+ROUTE PRINT lists every route Windows knows about — which next hop to use for which destination network. It is the first place to look when traffic should leave through one interface but is going out another.
 
 route print
 
+ROUTE PRINT
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
 
 Manages network resources such as shared drives, users, and connections.
 
 net use
 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Transfers files between local and remote systems using the FTP protocol.
 
@@ -63,7 +118,7 @@ ftp <server_address>
 
 FTP is not secure  Use SFTP or FTPS when possible
 
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Configures and manages network settings and profiles
 
@@ -75,16 +130,21 @@ netsh is useful for:
 - Troubleshooting connectivity  
 - Advanced network administration
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Connects to remote systems using the Telnet protocol.
 
 telnet <hostname> <port>
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+GETMAC and HOSTNAME
 
+GETMAC prints the MAC address of every network adapter; HOSTNAME prints the computer's name. Both are tiny but invaluable when you need to identify a machine in a network inventory or asset list.
 
+GETMAC
 
+HOSTNAME
 
 
 
