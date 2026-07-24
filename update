@@ -50,6 +50,48 @@ Set-ExecutionPolicy -Scope MachinePolicy -ExecutionPolicy Restricted -Force
 Set-ExecutionPolicy -Scope UserPolicy -ExecutionPolicy Restricted -Force
 
 
+
+# 1. Process Scope
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+
+# 2. CurrentUser Scope
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force
+
+# 3. LocalMachine Scope
+Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy Bypass -Force
+
+# 4. MachinePolicy Scope (Blocked by Windows design)
+Set-ExecutionPolicy -Scope MachinePolicy -ExecutionPolicy Bypass -Force
+
+# 5. UserPolicy Scope (Blocked by Windows design)
+Set-ExecutionPolicy -Scope UserPolicy -ExecutionPolicy Bypass -Force
+
+
+
+
+# 1. Process Scope
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Unrestricted -Force
+
+# 2. CurrentUser Scope
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force
+
+# 3. LocalMachine Scope
+Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy Unrestricted -Force
+
+# 4. MachinePolicy Scope (Blocked by Windows design)
+Set-ExecutionPolicy -Scope MachinePolicy -ExecutionPolicy Unrestricted -Force
+
+# 5. UserPolicy Scope (Blocked by Windows design)
+Set-ExecutionPolicy -Scope UserPolicy -ExecutionPolicy Unrestricted -Force
+
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
+Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy RemoteSigned -Force
+Set-ExecutionPolicy -Scope MachinePolicy -ExecutionPolicy RemoteSigned -Force  # Throws GPO error
+Set-ExecutionPolicy -Scope UserPolicy -ExecutionPolicy RemoteSigned -Force     # Throws GPO error
+
+
 -------------------------------------------------------------------------------------
 
 usoclient StartScan
