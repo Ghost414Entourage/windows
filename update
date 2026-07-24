@@ -28,6 +28,10 @@ Get-WindowsUpdate -Install -AcceptAll -AutoReboot
 Install-WindowsUpdate
 
 
+Uninstall-Module -Name PSWindowsUpdate -AllVersions -Force
+Remove-Module -Name PSWindowsUpdate -Force
+
+
 
 
 -------------------------------------------------------------------------------------
