@@ -25,6 +25,11 @@ Get-command -Module PSWindowsUpdate | Sort-Object CommandType, Name
 
 Get-WindowsUpdate -Install -AcceptAll -AutoReboot
 
+Install-WindowsUpdate
+
+
+
+
 -------------------------------------------------------------------------------------
 
 usoclient StartScan
