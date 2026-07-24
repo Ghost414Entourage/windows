@@ -1,3 +1,13 @@
+https://msrc.microsoft.com/update-guide
+
+https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 Install-Module PSWindowsUpdate
 
 Import-Module PSWindowsUpdate
