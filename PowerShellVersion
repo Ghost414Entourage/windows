@@ -21,9 +21,9 @@ Start-Process pwsh -Verb RunAs
 
 Get-Date
 
-Get-Date -Format "yyyy-MM-dd"
+Set-Date -Date "2026-07-24"
 
-Get-Date -Format "MM/dd/yyyy"
+Set-Date -Date "2026-07-24 12:00:00"
 
 
 Get-TimeZone
