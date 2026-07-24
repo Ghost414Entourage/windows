@@ -34,6 +34,16 @@ Remove-Module -Name PSWindowsUpdate -Force
 
 
 
+# 1. Clear the active terminal override (resets Process to Undefined)
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Undefined -Force
+
+# 2. Lock down CurrentUser scope
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Restricted -Force
+
+# 3. Lock down LocalMachine scope (system-wide)
+Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy Restricted -Force
+
+
 -------------------------------------------------------------------------------------
 
 usoclient StartScan
