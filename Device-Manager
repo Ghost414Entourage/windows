@@ -1,0 +1,42 @@
+https://www.dell.com/support/kbdoc/en-my/000123570/how-to-access-device-manager
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+The Device Manager is a fundamental tool in Windows 11 that allows you to check, 
+configure and update all the hardware peripherals of your computer, 
+ensuring the correct functioning of the drivers and the stability of the operating system.
+
+
+
+
+Start menu → Search for "Device Manager"
+
+Rightclick on Start → Device Manager
+
+Win+X → Device Manager
+
+Via Control Panel → Hardware and Sound → Device Manager
+
+devmgmt.msc
+
+
+
+
+
+Update Drivers  
+1. Rightclick on the device → Update Driver
+
+2. Choose from:
+o Automatically search for updated drivers (recommended) 
+o Search for drivers on your computer (if you downloaded the file)
+
+3. Windows will install the latest compatible version
+
+
+
