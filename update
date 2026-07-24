@@ -30,7 +30,7 @@ Install-WindowsUpdate
 
 Uninstall-Module -Name PSWindowsUpdate -AllVersions -Force
 Remove-Module -Name PSWindowsUpdate -Force
-
+Get-InstalledModule -Name PSWindowsUpdate
 
 
 
@@ -90,6 +90,25 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
 Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy RemoteSigned -Force
 Set-ExecutionPolicy -Scope MachinePolicy -ExecutionPolicy RemoteSigned -Force  # Throws GPO error
 Set-ExecutionPolicy -Scope UserPolicy -ExecutionPolicy RemoteSigned -Force     # Throws GPO error
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy AllSigned -Force
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy AllSigned -Force
+Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy AllSigned -Force
+Set-ExecutionPolicy -Scope MachinePolicy -ExecutionPolicy AllSigned -Force     # Throws GPO error
+Set-ExecutionPolicy -Scope UserPolicy -ExecutionPolicy AllSigned -Force        # Throws GPO error
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Undefined -Force
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Undefined -Force
+Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy Undefined -Force
+Set-ExecutionPolicy -Scope MachinePolicy -ExecutionPolicy Undefined -Force     # Throws GPO error
+Set-ExecutionPolicy -Scope UserPolicy -ExecutionPolicy Undefined -Force        # Throws GPO error
+
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Default -Force
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Default -Force
+Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy Default -Force
+Set-ExecutionPolicy -Scope MachinePolicy -ExecutionPolicy Default -Force        # Throws GPO error
+Set-ExecutionPolicy -Scope UserPolicy -ExecutionPolicy Default -Force           # Throws GPO error
 
 
 -------------------------------------------------------------------------------------
