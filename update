@@ -12,7 +12,11 @@ Install-Module PSWindowsUpdate
 
 Import-Module PSWindowsUpdate
 
+Get-command -Module PSWindowsUpdate | Sort-Object CommandType, Name
+
 Get-WindowsUpdate -Install -AcceptAll -AutoReboot
+
+-------------------------------------------------------------------------------------
 
 usoclient StartScan
 
