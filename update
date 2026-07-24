@@ -5,7 +5,16 @@ https://learn.microsoft.com/en-us/windows/release-health/windows11-release-infor
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Get-ExecutionPolicy -List
 
+Get-ExecutionPolicy
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+Import-Module PSWindowsUpdate
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Undefined -Force
 
 
 Install-Module PSWindowsUpdate
